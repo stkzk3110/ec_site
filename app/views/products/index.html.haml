@@ -1,12 +1,16 @@
 %div.container
     %div.row
         %div.col
+            %h2 商品一覧
+
             - @products.each do |product|
-                .product
-                    %h5
-                        = product.name
-                    %p
-                        = product.description
-                    %p
-                        = product.display_price
-                    %hr
+                - if product.image.present?
+                    = image_tag product.image_url do
+                        .product
+                            %h5
+                                = product.name
+                            %p
+                                = product.description
+                            %p
+                                = product.display_price
+                            %hr

@@ -1,0 +1,12 @@
+%div.container
+    %div.row
+        %div.col
+            - @products.each do |product|
+                .product
+                    %h5
+                        = product.name
+                    %p
+                        = product.description
+                    %p
+                        = product.display_price
+                    %hr

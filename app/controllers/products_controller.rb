@@ -14,10 +14,6 @@ class ProductsController < ApplicationController
             render :new
         end
     end
-    def show
-        @product = Product.find_by(params[:hashid])
-        #redirect_to root_path
-    end
 
     private
     def product_params

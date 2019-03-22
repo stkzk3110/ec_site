@@ -10,7 +10,7 @@
                                 .card
                                     .card-image
                                         - if product.image.present?
-                                            = link_to image_tag(product.image_url), "/products/#{product.hashid}"
+                                            = image_tag product.image_url
                                         %span.card-title
                                             #{product.name}(#{product.display_price})
                                     .card-content

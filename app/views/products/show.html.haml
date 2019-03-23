@@ -1,0 +1,16 @@
+%div.container
+    %div.row
+        %aside.col-md-4
+            %section.product_info
+                %h1
+                    商品の詳細
+                    .card
+                        .card-image
+                            = image_tag(@product.image_url || "sample.png")
+                        .card-content
+                            = @product.name
+                            = @product.description
+                            = @product.display_price
+                    %div.buy_btn
+                        .btn.btn-large
+                            買い物かごに入れる
